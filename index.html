@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Typing Speed Test</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+        <header>
+            <div class="logo">
+                <img src="./assets/images/logo-large.svg" alt="Typing Speed Test Logo">
+            </div>
+            <div class="personal-best">
+                <span class="trophy">
+                    <img src="./assets/images/icon-personal-best.svg" alt="Trophy Icon">
+                </span>
+                <span>Personal best: <strong id="personalBest">0 WPM</strong></span>
+            </div>
+        </header>
+
+        <div class="stats-bar">
+            <div class="stat">
+                <span class="stat-label">WPM:</span>
+                <span class="stat-value" id="wpm">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">|</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Accuracy:</span>
+                <span class="stat-value" id="accuracy">100%</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">|</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Time:</span>
+                <span class="stat-value" id="time">0:60</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label>Difficulty:</label>
+                <div class="btn-group">
+                    <button class="btn" data-difficulty="easy">Easy</button>
+                    <button class="btn" data-difficulty="medium">Medium</button>
+                    <button class="btn active" data-difficulty="hard">Hard</button>
+                </div>
+            </div>
+            <div class="control-group">
+                <label>Mode:</label>
+                <div class="btn-group">
+                    <button class="btn active" data-mode="timed">Timed (60s)</button>
+                    <button class="btn" data-mode="passage">Passage</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-display blurred" id="textDisplay">
+            <div class="start-overlay" id="startOverlay">
+                <button class="start-btn" id="startBtn">Start Typing Test</button>
+                <p class="start-instruction">Or click the text and start typing</p>
+            </div>
+            <div id="textContent"></div>
+        </div>
+
+        <button class="restart-btn" id="restartTestBtn">Restart Test ↻</button>
+    </div>
+
+    <div class="results-overlay hidden" id="resultsOverlay">
+        <div class="results-card">
+            <div class="result-icon" id="resultIcon">✓</div>
+            <h2 class="result-title" id="resultTitle">Test Complete!</h2>
+            <p class="result-subtitle" id="resultSubtitle">Solid run. Keep pushing to beat your high score.</p>
+            
+            <div class="result-stats">
+                <div class="result-stat">
+                    <div class="result-stat-label">WPM:</div>
+                    <div class="result-stat-value" id="resultWpm">0</div>
+                </div>
+                <div class="result-stat">
+                    <div class="result-stat-label">Accuracy:</div>
+                    <div class="result-stat-value red" id="resultAccuracy">0%</div>
+                </div>
+                <div class="result-stat">
+                    <div class="result-stat-label">Characters</div>
+                    <div class="result-stat-value green" id="resultChars">0/0</div>
+                </div>
+            </div>
+
+            <button class="start-btn" id="restartBtn">Go Again ↻</button>
+        </div>
+    </div>
+
+
+  
+  <!-- Test Complete End -->
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Arjun KC</a>.
+  </div>
+</body>
+</html>
